@@ -97,14 +97,11 @@ const partialThots = [
   'Making memories that will last a lifetime.',
 ];
 
-// Get a random item given an array
 const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-// Makes random username from the names array
 const getRandomUser = () =>
   `${getRandomArrItem(names)} ${getRandomArrItem(names)}`;
 
-// Function to generate random thoughts that we can add to the database
 
 const getRandomThought = () => {
   return {
@@ -113,5 +110,4 @@ const getRandomThought = () => {
   };
 };
 
-// Export the functions for use in seed.js
 module.exports = { getRandomUser, getRandomThought };

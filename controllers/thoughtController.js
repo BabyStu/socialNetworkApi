@@ -14,7 +14,6 @@ module.exports = {
   async getSingleThought(req, res) {
     try {
       const thought = await Thought.findOne({ _id: req.params.thoughtId })
-      // ask about this
         .select('-__v');
 
       if (!thought) {
@@ -69,8 +68,6 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-
-  // Ask if these reactions are correct 
 
   // Add a reaction
   async addReaction(req, res) {

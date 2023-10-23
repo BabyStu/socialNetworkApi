@@ -47,10 +47,7 @@ module.exports = {
       if (!user) {
         return res.status(404).json({ message: 'No thought with that ID' });
       }
-      // ask if this is needed
 
-      // await User.deleteMany({ _id: { $in: course.students } });
-      // res.json({ message: 'Course and students deleted!' });
     } catch (err) {
       res.status(500).json(err);
     }
@@ -59,7 +56,6 @@ module.exports = {
   async updateUser(req, res) {
     try {
       const user = await User.findOneAndUpdate(
-        // ask about this
         { _id: req.params.userId },
         { $set: req.body },
         { runValidators: true, new: true }
@@ -75,14 +71,11 @@ module.exports = {
     }
   },
 
-  // Ask if these reactions are correct 
-
   // Add a friend
   
   async addFriend(req, res) {
     try {
       const user = await User.findOneAndUpdate(
-        // ask about this
         { _id: req.params.userId },
         { $addToSet: { friends: req.params.friendId } },
         { runValidators: true, new: true }
