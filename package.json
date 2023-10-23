@@ -1,7 +1,7 @@
 {
-  "name": "28-Stu_Mini-Project",
+  "name": "socialNetworkApi",
   "version": "1.0.1",
-  "description": "Mongoose back-end project - Develop",
+  "description": "Mongoose back-end project",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "mongodb": "^6.1.0",
     "mongoose": "^7.0.2"
   },
   "devDependencies": {

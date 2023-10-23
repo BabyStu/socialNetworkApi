@@ -22,6 +22,7 @@ module.exports = {
       }
 
       res.json(thought);
+
     } catch (err) {
       res.status(500).json(err);
     }
@@ -44,10 +45,7 @@ module.exports = {
       if (!thought) {
         return res.status(404).json({ message: 'No thought with that ID' });
       }
-      // ask if this is needed
-
-      // await User.deleteMany({ _id: { $in: course.students } });
-      // res.json({ message: 'Course and students deleted!' });
+     
     } catch (err) {
       res.status(500).json(err);
     }

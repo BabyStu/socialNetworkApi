@@ -42,7 +42,7 @@ connection.once('open', async () => {
   // Loop 20 times -- add thoughts to the thoughts array
   for (let i = 0; i < 20; i++) {
     // Get some random thoughts using a helper function that we imported from ./data
-    const thoughtText = getRandomthought();
+    const thoughtText = getRandomThought();
 
     const username = getRandomUser();
     const reactions = [];
@@ -60,6 +60,8 @@ connection.once('open', async () => {
 
   // Log out the seed data to indicate what should appear in the database
   console.table(users);
+  console.table(thoughts);
+  
   console.info('Seeding complete! 🌱');
   process.exit(0);
 });

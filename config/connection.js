@@ -5,7 +5,8 @@ const { connect, connection } = require('mongoose');
 
 // ask about this
 const connectionString =
-  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/studentsDB';
+  process.env.MONGODB_URI || 'mongodb+srv://steveweede:zSp0nGTUGsQetI19@cluster0.pn50s1l.mongodb.net/?retryWrites=true&w=majority';
+
 
 connect(connectionString);
 

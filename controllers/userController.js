@@ -7,6 +7,7 @@ module.exports = {
   async getUsers(req, res) {
     try {
       const users = await User.find();
+      console.log(users);
       res.json(users);
     } catch (err) {
       res.status(500).json(err);
@@ -16,7 +17,7 @@ module.exports = {
   async getSingleUser(req, res) {
     try {
       const user = await User.findOne({ _id: req.params.userId })
-      // ask about this
+
         .select('-__v');
 
       if (!user) {
